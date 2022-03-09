@@ -37,6 +37,7 @@
             this.textBox_exponent = new System.Windows.Forms.TextBox();
             this.textBox_faktorial = new System.Windows.Forms.TextBox();
             this.textBox_cifra = new System.Windows.Forms.TextBox();
+            this.textBox_prvocislo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_mocnina
@@ -77,6 +78,7 @@
             this.button_prvocislo.TabIndex = 3;
             this.button_prvocislo.Text = "Prvocislo";
             this.button_prvocislo.UseVisualStyleBackColor = true;
+            this.button_prvocislo.Click += new System.EventHandler(this.button_prvocislo_Click);
             // 
             // button_pocetDel
             // 
@@ -119,11 +121,20 @@
             this.textBox_cifra.TabIndex = 8;
             this.textBox_cifra.Text = "75382";
             // 
+            // textBox_prvocislo
+            // 
+            this.textBox_prvocislo.Location = new System.Drawing.Point(78, 363);
+            this.textBox_prvocislo.Name = "textBox_prvocislo";
+            this.textBox_prvocislo.Size = new System.Drawing.Size(119, 20);
+            this.textBox_prvocislo.TabIndex = 10;
+            this.textBox_prvocislo.Text = "11";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox_prvocislo);
             this.Controls.Add(this.textBox_cifra);
             this.Controls.Add(this.textBox_faktorial);
             this.Controls.Add(this.textBox_exponent);
@@ -151,6 +162,7 @@
         private System.Windows.Forms.TextBox textBox_exponent;
         private System.Windows.Forms.TextBox textBox_faktorial;
         private System.Windows.Forms.TextBox textBox_cifra;
+        private System.Windows.Forms.TextBox textBox_prvocislo;
     }
 }
 

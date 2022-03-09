@@ -52,6 +52,17 @@ namespace Metody04_08
             }
             return soucet;
         }
+        private static bool jePrvocislo(int y)
+        {
+            bool prvocislo = true;
+            int pocetDelitelu = 0;
+            for (int i = 2; i < y-1; i++)
+            {
+                if (y % i == 0) ++pocetDelitelu;
+            }
+            if (pocetDelitelu > 0) prvocislo = false;
+            return prvocislo;
+        }
 
         private void button_mocnina_Click(object sender, EventArgs e)
         {
@@ -71,6 +82,13 @@ namespace Metody04_08
             int x = int.Parse(textBox_cifra.Text);
             MessageBox.Show("Součet lichých cifer je " + CifLichSoucet(x));
 
+        }
+
+        private void button_prvocislo_Click(object sender, EventArgs e)
+        {
+            int y = int.Parse(textBox_prvocislo.Text);
+            if (jePrvocislo(y)) MessageBox.Show("Zadané číslo je prvočíslo.");
+            else MessageBox.Show("Zadané číslo není prvočíslo.");
         }
     }
 }
