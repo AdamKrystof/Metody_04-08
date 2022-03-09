@@ -30,7 +30,17 @@ namespace Metody04_08
             if (exponentZaporny) vypocet = 1 / vypocet;
             return vypocet;
         }
-       
+        private int Faktorial(int x)
+        {
+            int faktorial = 1;
+            while (x > 0)
+            {
+                faktorial *= x;
+                --x;
+            }
+            return faktorial;
+        }
+
         private void button_mocnina_Click(object sender, EventArgs e)
         {
             int zaklad = int.Parse(textBox_zaklad.Text);
@@ -40,7 +50,8 @@ namespace Metody04_08
 
         private void button_faktorial_Click(object sender, EventArgs e)
         {
-            
+            int x = int.Parse(textBox_faktorial.Text);
+            MessageBox.Show("Faktorial je " + Faktorial(x));
         }
 
         private void button_cifLich_Click(object sender, EventArgs e)
