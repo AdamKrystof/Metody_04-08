@@ -40,6 +40,18 @@ namespace Metody04_08
             }
             return faktorial;
         }
+        private int CifLichSoucet(int a)
+        {
+            int cifra;
+            int soucet = 0;
+            while (a > 0)
+            {
+                cifra = a % 10;
+                if (cifra % 2 != 0) soucet += cifra;
+                a /= 10;
+            }
+            return soucet;
+        }
 
         private void button_mocnina_Click(object sender, EventArgs e)
         {
@@ -56,7 +68,8 @@ namespace Metody04_08
 
         private void button_cifLich_Click(object sender, EventArgs e)
         {
-           
+            int x = int.Parse(textBox_cifra.Text);
+            MessageBox.Show("Součet lichých cifer je " + CifLichSoucet(x));
 
         }
     }
