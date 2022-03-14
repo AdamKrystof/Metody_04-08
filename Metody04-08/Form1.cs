@@ -63,6 +63,16 @@ namespace Metody04_08
             if (pocetDelitelu > 0) prvocislo = false;
             return prvocislo;
         }
+        private int pocetSudDel(int a)
+        {
+            int pocet = 0;
+            for (int i = 2; i <= a; i++)
+            {
+                if (a % i == 0) pocet++;
+                ++i;
+            }
+            return pocet;
+        }
 
         private void button_mocnina_Click(object sender, EventArgs e)
         {
@@ -89,6 +99,18 @@ namespace Metody04_08
             int y = int.Parse(textBox_prvocislo.Text);
             if (jePrvocislo(y)) MessageBox.Show("Zadané číslo je prvočíslo.");
             else MessageBox.Show("Zadané číslo není prvočíslo.");
+        }
+
+        private void button_pocetDel_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox_pocetDel.Text);
+            if (pocetSudDel(a) > 0) MessageBox.Show("Počet sudých dělitelů je " + pocetSudDel(a));
+            else MessageBox.Show("Žádne sudé dělitele.\n");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

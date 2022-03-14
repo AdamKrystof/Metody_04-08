@@ -38,6 +38,9 @@
             this.textBox_faktorial = new System.Windows.Forms.TextBox();
             this.textBox_cifra = new System.Windows.Forms.TextBox();
             this.textBox_prvocislo = new System.Windows.Forms.TextBox();
+            this.textBox_pocetDel = new System.Windows.Forms.TextBox();
+            this.textBox_nsd = new System.Windows.Forms.TextBox();
+            this.button_NSD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_mocnina
@@ -62,7 +65,7 @@
             // 
             // button_cifLich
             // 
-            this.button_cifLich.Location = new System.Drawing.Point(339, 202);
+            this.button_cifLich.Location = new System.Drawing.Point(78, 228);
             this.button_cifLich.Name = "button_cifLich";
             this.button_cifLich.Size = new System.Drawing.Size(119, 32);
             this.button_cifLich.TabIndex = 2;
@@ -72,7 +75,7 @@
             // 
             // button_prvocislo
             // 
-            this.button_prvocislo.Location = new System.Drawing.Point(78, 389);
+            this.button_prvocislo.Location = new System.Drawing.Point(589, 228);
             this.button_prvocislo.Name = "button_prvocislo";
             this.button_prvocislo.Size = new System.Drawing.Size(119, 32);
             this.button_prvocislo.TabIndex = 3;
@@ -82,12 +85,13 @@
             // 
             // button_pocetDel
             // 
-            this.button_pocetDel.Location = new System.Drawing.Point(589, 390);
+            this.button_pocetDel.Location = new System.Drawing.Point(78, 376);
             this.button_pocetDel.Name = "button_pocetDel";
             this.button_pocetDel.Size = new System.Drawing.Size(119, 31);
             this.button_pocetDel.TabIndex = 4;
             this.button_pocetDel.Text = "Počet dělitelů";
             this.button_pocetDel.UseVisualStyleBackColor = true;
+            this.button_pocetDel.Click += new System.EventHandler(this.button_pocetDel_Click);
             // 
             // textBox_zaklad
             // 
@@ -115,7 +119,7 @@
             // 
             // textBox_cifra
             // 
-            this.textBox_cifra.Location = new System.Drawing.Point(339, 176);
+            this.textBox_cifra.Location = new System.Drawing.Point(78, 202);
             this.textBox_cifra.Name = "textBox_cifra";
             this.textBox_cifra.Size = new System.Drawing.Size(119, 20);
             this.textBox_cifra.TabIndex = 8;
@@ -123,17 +127,46 @@
             // 
             // textBox_prvocislo
             // 
-            this.textBox_prvocislo.Location = new System.Drawing.Point(78, 363);
+            this.textBox_prvocislo.Location = new System.Drawing.Point(589, 202);
             this.textBox_prvocislo.Name = "textBox_prvocislo";
             this.textBox_prvocislo.Size = new System.Drawing.Size(119, 20);
             this.textBox_prvocislo.TabIndex = 10;
             this.textBox_prvocislo.Text = "11";
+            // 
+            // textBox_pocetDel
+            // 
+            this.textBox_pocetDel.Location = new System.Drawing.Point(78, 350);
+            this.textBox_pocetDel.Name = "textBox_pocetDel";
+            this.textBox_pocetDel.Size = new System.Drawing.Size(119, 20);
+            this.textBox_pocetDel.TabIndex = 11;
+            this.textBox_pocetDel.Text = "15";
+            this.textBox_pocetDel.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox_nsd
+            // 
+            this.textBox_nsd.Location = new System.Drawing.Point(589, 350);
+            this.textBox_nsd.Name = "textBox_nsd";
+            this.textBox_nsd.Size = new System.Drawing.Size(119, 20);
+            this.textBox_nsd.TabIndex = 12;
+            this.textBox_nsd.Text = "15";
+            // 
+            // button_NSD
+            // 
+            this.button_NSD.Location = new System.Drawing.Point(589, 376);
+            this.button_NSD.Name = "button_NSD";
+            this.button_NSD.Size = new System.Drawing.Size(119, 31);
+            this.button_NSD.TabIndex = 13;
+            this.button_NSD.Text = "NSD";
+            this.button_NSD.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_NSD);
+            this.Controls.Add(this.textBox_nsd);
+            this.Controls.Add(this.textBox_pocetDel);
             this.Controls.Add(this.textBox_prvocislo);
             this.Controls.Add(this.textBox_cifra);
             this.Controls.Add(this.textBox_faktorial);
@@ -163,6 +196,9 @@
         private System.Windows.Forms.TextBox textBox_faktorial;
         private System.Windows.Forms.TextBox textBox_cifra;
         private System.Windows.Forms.TextBox textBox_prvocislo;
+        private System.Windows.Forms.TextBox textBox_pocetDel;
+        private System.Windows.Forms.TextBox textBox_nsd;
+        private System.Windows.Forms.Button button_NSD;
     }
 }
 
