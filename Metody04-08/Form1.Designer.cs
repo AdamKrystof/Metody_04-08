@@ -39,8 +39,9 @@
             this.textBox_cifra = new System.Windows.Forms.TextBox();
             this.textBox_prvocislo = new System.Windows.Forms.TextBox();
             this.textBox_pocetDel = new System.Windows.Forms.TextBox();
-            this.textBox_nsd = new System.Windows.Forms.TextBox();
+            this.textBox_nsd1 = new System.Windows.Forms.TextBox();
             this.button_NSD = new System.Windows.Forms.Button();
+            this.textBox_nsd2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_mocnina
@@ -142,13 +143,13 @@
             this.textBox_pocetDel.Text = "15";
             this.textBox_pocetDel.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox_nsd
+            // textBox_nsd1
             // 
-            this.textBox_nsd.Location = new System.Drawing.Point(589, 350);
-            this.textBox_nsd.Name = "textBox_nsd";
-            this.textBox_nsd.Size = new System.Drawing.Size(119, 20);
-            this.textBox_nsd.TabIndex = 12;
-            this.textBox_nsd.Text = "15";
+            this.textBox_nsd1.Location = new System.Drawing.Point(589, 325);
+            this.textBox_nsd1.Name = "textBox_nsd1";
+            this.textBox_nsd1.Size = new System.Drawing.Size(119, 20);
+            this.textBox_nsd1.TabIndex = 12;
+            this.textBox_nsd1.Text = "15";
             // 
             // button_NSD
             // 
@@ -158,14 +159,24 @@
             this.button_NSD.TabIndex = 13;
             this.button_NSD.Text = "NSD";
             this.button_NSD.UseVisualStyleBackColor = true;
+            this.button_NSD.Click += new System.EventHandler(this.button_NSD_Click);
+            // 
+            // textBox_nsd2
+            // 
+            this.textBox_nsd2.Location = new System.Drawing.Point(589, 351);
+            this.textBox_nsd2.Name = "textBox_nsd2";
+            this.textBox_nsd2.Size = new System.Drawing.Size(119, 20);
+            this.textBox_nsd2.TabIndex = 14;
+            this.textBox_nsd2.Text = "18";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox_nsd2);
             this.Controls.Add(this.button_NSD);
-            this.Controls.Add(this.textBox_nsd);
+            this.Controls.Add(this.textBox_nsd1);
             this.Controls.Add(this.textBox_pocetDel);
             this.Controls.Add(this.textBox_prvocislo);
             this.Controls.Add(this.textBox_cifra);
@@ -197,8 +208,9 @@
         private System.Windows.Forms.TextBox textBox_cifra;
         private System.Windows.Forms.TextBox textBox_prvocislo;
         private System.Windows.Forms.TextBox textBox_pocetDel;
-        private System.Windows.Forms.TextBox textBox_nsd;
+        private System.Windows.Forms.TextBox textBox_nsd1;
         private System.Windows.Forms.Button button_NSD;
+        private System.Windows.Forms.TextBox textBox_nsd2;
     }
 }
 

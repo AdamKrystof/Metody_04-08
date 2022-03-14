@@ -16,13 +16,13 @@ namespace Metody04_08
         {
             InitializeComponent();
         }
-        static double  Mocnina(int zaklad, int exponent)
+        static double Mocnina(int zaklad, int exponent)
         {
             double vypocet = 1;
             bool exponentZaporny = exponent < 0;
             exponent = Math.Abs(exponent);
 
-            while(exponent > 0)
+            while (exponent > 0)
             {
                 vypocet *= zaklad;
                 --exponent;
@@ -56,7 +56,7 @@ namespace Metody04_08
         {
             bool prvocislo = true;
             int pocetDelitelu = 0;
-            for (int i = 2; i < y-1; i++)
+            for (int i = 2; i < y - 1; i++)
             {
                 if (y % i == 0) ++pocetDelitelu;
             }
@@ -72,6 +72,15 @@ namespace Metody04_08
                 ++i;
             }
             return pocet;
+        }
+        private static int nejvetsiSpolDel(int a, int b)
+        {
+            int nejvetsiDelitel = 0;
+            for (int i = 1; i<=a; i++)
+			{
+                if (a % i == 0 && b % i == 0) nejvetsiDelitel = i;
+			}
+            return nejvetsiDelitel;
         }
 
         private void button_mocnina_Click(object sender, EventArgs e)
@@ -111,6 +120,13 @@ namespace Metody04_08
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_NSD_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox_nsd1.Text);
+            int b = int.Parse(textBox_nsd2.Text);
+            MessageBox.Show("Největší společný dělitel pro čísla " + a + " a " + b + " je " + nejvetsiSpolDel(a, b));
         }
     }
 }
